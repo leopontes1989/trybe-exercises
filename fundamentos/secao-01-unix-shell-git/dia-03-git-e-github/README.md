@@ -1,0 +1,1 @@
+Referente aos exercícios de Git
