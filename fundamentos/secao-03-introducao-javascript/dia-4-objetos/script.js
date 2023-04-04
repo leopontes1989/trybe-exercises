@@ -104,4 +104,97 @@ let leitor = {
   
   orderModifier(order);
 
-  // 'Olá, Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701'.
+  let lesson1 = {
+    materia: 'Matemática',
+    numeroEstudantes: 20,
+    professor: 'Maria Clara',
+    turno: 'manhã',
+  };
+  
+  let lesson2 = {
+    materia: 'História',
+    numeroEstudantes: 20,
+    professor: 'Carlos',
+  };
+  
+  let lesson3 = {
+    materia: 'Matemática',
+    numeroEstudantes: 10,
+    professor: 'Maria Clara',
+    turno: 'noite',
+  };
+
+/* 
+  lesson2.turno = 'noite';
+  console.log(lesson2) */
+
+  function adicionaEntrada(obj, key, value) {
+    obj[key] = value;
+  }
+
+  adicionaEntrada(lesson2, 'turno', 'noite');
+
+  console.log(lesson2);
+
+  function listKeys(obj) {
+  console.log(Object.keys(obj));
+ }
+
+listKeys(lesson3);
+console.log('-----------------');
+
+function objectSize(obj) {
+  console.log('Tamanho do objeto: ' + Object.entries(lesson1).length);
+}
+
+objectSize(lesson1);
+
+console.log('--------------------');
+function listValues(obj) {
+  console.log(Object.values(obj));
+}
+
+listValues(lesson2);
+
+console.log('----------------------');
+
+let allLessons = Object.assign({}, {
+  lesson1: lesson1,
+  lesson2: lesson2,
+  lesson3: lesson3,
+});
+
+console.log(allLessons);
+
+
+let pessoa = {
+  nome: 'Leonardo',
+  sobrenome: 'Pontes',
+  anoNascimento: 1989
+}
+
+console.log(`Paciente: ${pessoa.nome} ${pessoa.sobrenome}\nIdade: ${2023 - pessoa.anoNascimento} anos.`);
+
+const contaPalavras = frase => frase.split('').length;
+
+console.log(contaPalavras('Fala galera, meu nome é Leonardo! Tudo beleza?'));
+
+/* function objetoPessoa (nome, idade) {
+  return {
+    nome: nome,
+    idade: idade
+  }
+} */
+
+const objetoPessoa = (nome, idade) => ({nome: nome, idade: idade})
+console.log(objetoPessoa('Leonardo', 33));
+
+const saudacao = nome => console.log(`Olá ${nome} !`);
+
+saudacao('Leo');
+saudacao('Lina');
+saudacao('Osvaldo');
+saudacao('Eduardo');
+saudacao('Adan');
+
+
