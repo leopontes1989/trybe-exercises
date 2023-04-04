@@ -1,4 +1,4 @@
-let info = {
+/* let info = {
     personagem: 'Margarida',
     origem: 'Pato Donald',
     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
@@ -52,3 +52,56 @@ let leitor = {
   console.log(leitor);
 
   console.log('Julia tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
+ */
+
+  let order = {
+    name: 'Rafael Andrade',
+    phoneNumber: '11-98763-1416',
+    address: {
+      street: 'Rua das Flores',
+      number: '389',
+      apartment: '701',
+    },
+    order: {
+      pizza: {
+        marguerita: {
+          amount: 1,
+          price: 25,
+        },
+        pepperoni: {
+          amount: 1,
+          price: 20,
+        },
+      },
+      drinks: {
+        coke: {
+          type: 'Coca-Cola Zero',
+          price: 10,
+          amount: 1,
+        },
+      },
+      delivery: {
+        deliveryPerson: 'Ana Silveira',
+        price: 5,
+      },
+    },
+    payment: {
+      total: 60,
+    },
+  };
+  
+  function customerInfo(order) {
+    console.log('Olá '+ order.order.delivery.deliveryPerson +', entrega para: '+ order.name + ', Telefone: ' + order.phoneNumber + ', ' + order.address.street + ', ' + order.address.number + ', AP:' + order.address.apartment);
+  }
+  
+  customerInfo(order);
+  
+  function orderModifier(order) {
+    order.name = 'Luiz Silva';
+    order.payment = 50;
+    console.log('Olá, ' + order.name + ' o valor total do seu pedido de marguerita, peperoni e coca-cola zero é de: R$ '+ order.payment + ',00.');
+  }
+  
+  orderModifier(order);
+
+  // 'Olá, Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701'.
