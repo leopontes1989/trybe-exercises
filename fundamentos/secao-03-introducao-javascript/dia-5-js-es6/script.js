@@ -53,10 +53,46 @@ console.log('--------------------------------------------------------------');
 
   console.log('--------------------------------------------------------------');
 
-  
+
   const nomeCompleto = (nome, sobrenome) => `${nome} ${sobrenome}`;
 
   let nome2 = 'Ivan';
   let sobrenome = 'Pires';
   console.log(nomeCompleto(nome2, sobrenome));
 
+  console.log('--------------------------------------------------------------');
+
+  let speed = 90;
+  const speedCar = (speed) => (speed >= 120 ? 'Você ultrapassou o limite de velocidade' : 'Você está na velocidade permitida');
+   
+  console.log(speedCar(speed));
+
+  console.log('--------------------------------------------------------------');
+
+  const ligaDesliga = (bool) => (bool === true ? 'Ligado' : 'Desligado')
+  console.log(ligaDesliga(false));
+
+  console.log('--------------------------------------------------------------');
+
+  const pi = 3.14;
+  const areaCirculo = (raio) => 2 * pi * raio
+  console.log(`A área do círculo de raio é: ${areaCirculo(3)}`);
+
+  console.log('--------------------------------------------------------------');
+
+  const fraseCortada = (frase) => frase.split(' ');
+
+  const retornaMaior = (fraseCortada) => {
+    let maior = '';
+    for(i=0; i<fraseCortada.length; i++) {
+        if (fraseCortada[i].length > maior.length) {
+            maior = fraseCortada[i];
+        }
+    }
+    return maior;
+  }
+
+  console.log(retornaMaior(fraseCortada('Antônio foi ao banheiro e não sabemos o que aconteceu')));
+
+
+  
