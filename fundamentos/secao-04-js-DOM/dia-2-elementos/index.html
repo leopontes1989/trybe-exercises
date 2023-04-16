@@ -87,14 +87,14 @@
       image.className = 'small-image';
       image.src = 'https://picsum.photos/200';
       section2.appendChild(image);
-        //8
+        //8 && last
       const unorderList = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
       const ul = document.createElement('ul');
       for(i=0; i<unorderList.length; i++) {
         const li = document.createElement('li');
         if((!unorderList[i].includes('nove') && !unorderList[i].includes('dez'))) {
-        li.innerText = unorderList[i];
-        ul.appendChild(li);
+            li.innerText = unorderList[i];
+            ul.appendChild(li);
         }
       }
       section3.appendChild(ul);
