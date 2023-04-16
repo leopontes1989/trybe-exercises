@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <script>
+        //1
+      const body = document.getElementById('body');
+      const newElement = document.createElement('h1');
+      newElement.innerText = 'TrybeTrip - Agência de viagens';
+      body.appendChild(newElement);
+        //2
+      const main = document.createElement('main')
+      main.className = 'main-content'
+      body.appendChild(main);
+        //3
+      const section1 = document.createElement('section');
+      section1.className = 'center-content';
+      main.appendChild(section1);
+        //4
+      const tagP = document.createElement('p');
+      tagP.innerText = 'Texto qualquer criado!'
+      section1.appendChild(tagP);
+        //5
+      const section2 = document.createElement('section');
+      section2.className = 'left-content';
+      main.appendChild(section2);
+        //6
+      const section3 = document.createElement('section');
+      section3.className = 'right-content';
+      main.appendChild(section3);
+        //7
+      const image = document.createElement('img');
+      image.className = 'small-image';
+      image.src = 'https://picsum.photos/200';
+      section2.appendChild(image);
+        //8
+      const unorderList = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+      const ul = document.createElement('ul');
+      for(i=0; i<unorderList.length; i++) {
+        const li = document.createElement('li');
+        if((!unorderList[i].includes('nove') && !unorderList[i].includes('dez'))) {
+        li.innerText = unorderList[i];
+        ul.appendChild(li);
+        }
+      }
+      section3.appendChild(ul);
+      //9
+      const title1 = document.createElement('h3');
+      title1.innerText = 'Criado título h3 número 1'
+      main.appendChild(title1);
+      const title2 = document.createElement('h3');
+      title2.innerText = 'Criado título h3 número 2'
+      main.appendChild(title2);
+      const title3 = document.createElement('h3');
+      title3.innerText = 'Criado título h3 número 3'
+      main.appendChild(title3);
+
+
+      // BONUS
+
+      newElement.className = 'title';
+
+      title1.className = 'description';
+      title2.className = 'description';
+      title3.className = 'description';
+     
+      const removeSection = document.getElementsByClassName('left-content');
+      removeSection[0].remove()
+
+      main.style.textAlign = 'center';
+
+/*       const divCenter = document.createElement('div');
+      main.appendChild(divCenter);
+      divCenter.appendChild(section3);
+      divCenter.style.marginRight = '30%' */
+
+      section3.style.marginRight = 'auto'
+
+      section1.parentElement.style.backgroundColor = 'green';
+
+    </script>
+  </body>
+</html>
