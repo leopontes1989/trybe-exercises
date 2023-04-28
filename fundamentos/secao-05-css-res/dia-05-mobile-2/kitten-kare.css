@@ -78,3 +78,43 @@ body {
   padding: 20px;
   height: 1%;
 }
+
+@media print {
+  #header, #navigation, #footer {
+    display: none;
+  }
+
+  #content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #navigation li a {
+    border: none;
+  }
+
+  #navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #aside {
+    display: none;
+  }
+
+  img {
+    width: 250px;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+    margin-bottom: 80px
+  }
+
+}
